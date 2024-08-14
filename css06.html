@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    code {
+        display: block;
+        background-color: #1e1e1e; /* Dark background */
+        color: #d4d4d4; /* Light grey text */
+        padding: 10px;
+        font-family: "Consolas", "Courier New", monospace; /* Monospaced font */
+        line-height: 1.5;
+        border-radius: 5px;
+        overflow-x: auto;
+        white-space: pre;
+    }
+    
+    /* Line numbers styling */
+    code::before {
+        counter-reset: line;
+    }
+    
+    code > span {
+        display: block;
+        counter-increment: line;
+        position: relative;
+        padding-left: 35px;
+    }
+    
+    code > span::before {
+        content: counter(line);
+        position: absolute;
+        left: 5px;
+        color: #888; /* Line number color */
+    }
+    
+    /* Different colors for various components */
+    code .protocol { color: #569cd6; }
+    code .host { color: #4ec9b0; }
+    code .port { color: #b5cea8; }
+    code .path { color: #dcdcaa; }
+    code .query { color: #ce9178; }
+    code .fragment { color: #c586c0; }
+    /* Additional styling for explanations */
+code .comment {
+    color: #6a9955; /* Green color for comments */
+    margin-left: 20px;
+    display: block;
+}
+
+code .comment-keyword { color: #569cd6; } /* Keywords in comments */
+</body>
+</html>
